@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<title>Jeil2022 |  More Pages</title>
+		<link rel="stylesheet" href="more-style.css">
+	</head>
+	<body>
+  	<header>
+  		<img src="1.computer.jpg" class="banner">
+  		<a href="#" class="logo">MORE</a>
+      <div class="toggle"></div>
+  		<nav>
+  			<ul>
+  				<li><a href="index.html">HOME</a></li>
+  				<li><a href="sorry-index.html">PROJECT</a></li>
+  				<li><a href="sorry-index.html">INFO</a></li>
+  				<li><a href="#">MORE</a></li>
+  			</ul>
+  		</nav>
+  	</header>
+    <section>
+      <h2>Computer Specs</h2>
+      <p>CPU | AMD Ryzen5 5600x</p>
+      <p>VGA | AMD RX580 IceQ 4GB</p>
+      <p>RAM | Samsung 4 + 8 + 4 + 8 (24GB)</p>
+      <p>M/B | ASrock B550M Steel Legend</p>
+      <p>C/L | AMD Prism Wraith</p>
+      <p>C/S | Micronics GH2-Metal</p>
+      <p>PSU | Micronics Classic ii 600w</p>
+      <br><br>
+      <h2>Peripherals</h2>
+      <p>Mouse | Logitech G304</p>
+      <p>Keyboard | Leopold FC700r</p>
+      <p>Headset | Logitech G433</p>
+      <br><br>
+      <h2>Fountain pen</h2>
+      <p>Lamy | Safari Charcoal Black</p>
+      <p>Lamy | Joy White Red Clip</p>
+      <p>Monami | 153 Neo Coral Pink</p>
+      <p>FaberCastell | Ambition Coconut Wood</p>
+
+    </section>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function() {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+
+      const navigation = document.querySelector('nav');
+      document.querySelector('.toggle').onclick = function()
+      {
+        this.classList.toggle('active');
+        navigation.classList.toggle('active');
+      }
+    </script>
+  </body>
+</html>

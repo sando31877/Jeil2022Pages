@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #09161d;
+}
+header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+header .logo {
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: 600;
+}
+.group {
+  position: relative;
+  display: flex;
+}
+.group .navigation,
+.group .action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.group ul li {
+  list-style: none;
+}
+.group ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin-left: 30px;
+}
+.group ul li a:hover {
+  color: rgb(221, 105, 105);
+}
+.group .action {
+  margin-left: 20px;
+}
+.group .action li a {
+  font-size: 1.25em;
+}
+.backmain {
+  width: 1680px;
+  background-color: black;
+}
+.backnav {
+  width: 1680px;
+}
+.korean {
+}
+.math {
+}
+.science {
+}
+
+.card {
+  position: relative;
+  width: 220px;
+  height: 380px;
+  background: #040803;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px;
+  display: inline-block;
+  float: left;
+}
+.korean .card:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #f3bb21;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+.math .card:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #218ef3;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+.science .card:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #c7364a;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+.card:hover:before {
+  top: -70%;
+  transform: skewY(390deg);
+}
+.korean .card:after {
+  content: "Korean";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: rgba(0, 255, 0, 0.027);
+  font-weight: 600;
+  font-size: 7em;
+  transition: 0.5s;
+}
+.math .card:after {
+  content: "Math";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: rgba(0, 255, 0, 0.027);
+  font-weight: 600;
+  font-size: 7em;
+  transition: 0.5s;
+}
+.science .card:after {
+  content: "Science";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: rgba(0, 255, 0, 0.027);
+  font-weight: 600;
+  font-size: 7em;
+  transition: 0.5s;
+}
+.card .imgBx {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+.card .imgBx img {
+  max-width: 100%;
+  transition: 0.5s;
+}
+.card:hover .imgBx img {
+  max-width: 90%;
+}
+.math .card .imgBx img {
+  max-width: 140%;
+  transition: 0.5s;
+}
+.math .card:hover .imgBx img {
+  max-width: 120%;
+}
+.science .card .imgBx img {
+  max-width: 80%;
+  transition: 0.5s;
+}
+.science .card:hover .imgBx img {
+  max-width: 70%;
+}
+.card .contentBx {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+.card .contentBx h3 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.card .contentBx .price {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.korean .card .contentBx .buy {
+  position: relative;
+  top: 200px;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  background: #f3bb21;
+  opacity: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+.math .card .contentBx .buy {
+  position: relative;
+  top: 200px;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  background: #218ef3;
+  opacity: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+.science .card .contentBx .buy {
+  position: relative;
+  top: 200px;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  background: #c7364a;
+  opacity: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+.card:hover .contentBx .buy {
+  opacity: 1;
+  top: 0px;
+}
+small {
+  font-size: 13px;
+}
