@@ -19,6 +19,7 @@ header {
   align-items: center;
   margin-top: 40px;
   margin-bottom: 80px;
+  top: -250px;
 }
 header .logo {
   position: relative;
@@ -71,7 +72,7 @@ header .logo {
 .card {
   position: relative;
   width: 220px;
-  height: 380px;
+  height: 220px;
   background: #040803;
   border-radius: 20px;
   overflow: hidden;
@@ -79,70 +80,71 @@ header .logo {
   display: inline-block;
   float: left;
 }
-.korean .card:before {
+.card:before {
   content: "";
   position: absolute;
-  top: -50%;
+  top: -60%;
   width: 100%;
   height: 100%;
+  transform: skewY(350deg);
+  transition: 0.2s;
+}
+.korean .card:before {
   background: #f3bb21;
-  transform: skewY(345deg);
-  transition: 0.5s;
 }
 .math .card:before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  width: 100%;
-  height: 100%;
   background: #218ef3;
-  transform: skewY(345deg);
-  transition: 0.5s;
+}
+.physics .card:before {
+  background: #ff2dd2;
 }
 .science .card:before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  width: 100%;
-  height: 100%;
   background: #c7364a;
-  transform: skewY(345deg);
-  transition: 0.5s;
+}
+.test .card:before {
+  background: #2e2e2e;
 }
 .card:hover:before {
   top: -70%;
-  transform: skewY(390deg);
+  transform: skewY(370deg);
+}
+.card:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: rgba(0, 255, 0, 0.027);
+  font-weight: 600;
+  font-size: 7em;
+  transition: 0.2s;
 }
 .korean .card:after {
   content: "Korean";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  color: rgba(0, 255, 0, 0.027);
-  font-weight: 600;
-  font-size: 7em;
-  transition: 0.5s;
 }
 .math .card:after {
   content: "Math";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  color: rgba(0, 255, 0, 0.027);
-  font-weight: 600;
-  font-size: 7em;
-  transition: 0.5s;
+}
+.physics .card:after {
+  content: "Physics";
 }
 .science .card:after {
   content: "Science";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  color: rgba(0, 255, 0, 0.027);
-  font-weight: 600;
-  font-size: 7em;
-  transition: 0.5s;
 }
+.korean .card .card:after {
+  background: #f3bb21;
+}
+.math .card .card:after {
+  background: #218ef3;
+}
+.physics .card .card:after {
+  background: #ff2dd2;
+}
+.science .card .card:after {
+  background: #c7364a;
+}
+.test .card .card:after {
+  background: #2e2e2e;
+}
+
 .card .imgBx {
   position: relative;
   width: 100%;
@@ -153,25 +155,11 @@ header .logo {
   z-index: 1;
 }
 .card .imgBx img {
-  max-width: 100%;
-  transition: 0.5s;
+  max-width: 40%;
+  transition: 0.2s;
 }
 .card:hover .imgBx img {
-  max-width: 90%;
-}
-.math .card .imgBx img {
-  max-width: 140%;
-  transition: 0.5s;
-}
-.math .card:hover .imgBx img {
-  max-width: 120%;
-}
-.science .card .imgBx img {
-  max-width: 80%;
-  transition: 0.5s;
-}
-.science .card:hover .imgBx img {
-  max-width: 70%;
+  max-width: 10%;
 }
 .card .contentBx {
   position: relative;
@@ -189,56 +177,43 @@ header .logo {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.card .contentBx .price {
+.card .contentBx .subject {
   font-size: 24px;
   color: #fff;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.korean .card .contentBx .buy {
+
+.card .contentBx .gpg {
   position: relative;
-  top: 200px;
-  padding: 10px 30px;
-  margin-top: 15px;
+  top: 100px;
+  padding: 5px 30px;
+  margin-top: 10px;
   color: #fff;
   text-decoration: none;
   border-radius: 30px;
+  opacity: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.2s;
+}
+.korean .card .contentBx .gpg {
   background: #f3bb21;
-  opacity: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: 0.5s;
 }
-.math .card .contentBx .buy {
-  position: relative;
-  top: 200px;
-  padding: 10px 30px;
-  margin-top: 15px;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 30px;
+.math .card .contentBx .gpg {
   background: #218ef3;
-  opacity: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: 0.5s;
 }
-.science .card .contentBx .buy {
-  position: relative;
-  top: 200px;
-  padding: 10px 30px;
-  margin-top: 15px;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 30px;
+.physics .card .contentBx .gpg {
+  background: #ff2dd2;
+}
+.science .card .contentBx .gpg {
   background: #c7364a;
-  opacity: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: 0.5s;
 }
-.card:hover .contentBx .buy {
+.test .card .contentBx .gpg {
+  background: #2e2e2e;
+}
+.card:hover .contentBx .gpg {
   opacity: 1;
   top: 0px;
 }
