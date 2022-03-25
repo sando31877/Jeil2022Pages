@@ -68,6 +68,8 @@ header .logo {
 }
 .science {
 }
+.other {
+}
 
 .card {
   position: relative;
@@ -101,6 +103,9 @@ header .logo {
 .science .card:before {
   background: #c7364a;
 }
+.other .card:before {
+  background: #ff9900;
+}
 .test .card:before {
   background: #2e2e2e;
 }
@@ -129,6 +134,9 @@ header .logo {
 .science .card:after {
   content: "Science";
 }
+.other .card:after {
+  content: "Other";
+}
 .korean .card .card:after {
   background: #f3bb21;
 }
@@ -140,6 +148,9 @@ header .logo {
 }
 .science .card .card:after {
   background: #c7364a;
+}
+.other .card .card:after {
+  background: #ff9900;
 }
 .test .card .card:after {
   background: #2e2e2e;
@@ -209,6 +220,9 @@ header .logo {
 }
 .science .card .contentBx .gpg {
   background: #c7364a;
+}
+.other .card .contentBx .gpg {
+  background: #ff9900;
 }
 .test .card .contentBx .gpg {
   background: #2e2e2e;

@@ -1,0 +1,7 @@
+git add .
+
+git status
+
+git commit -m "22.00.00"
+
+git push origin master
