@@ -13,13 +13,13 @@ body {
 }
 header {
   position: relative;
-  width: 100%;
+  width: 99%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px;
+  margin-top: -70px;
   margin-bottom: 80px;
-  top: -250px;
+
 }
 header .logo {
   position: relative;
@@ -56,11 +56,11 @@ header .logo {
   font-size: 1.25em;
 }
 .backmain {
-  width: 1680px;
+  width: 100%;
   background-color: black;
 }
 .backnav {
-  width: 1680px;
+  width: 100%;
 }
 .korean {
 }
